@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Decodificador de texto</title>
+
+</head>
+
+<body>
+    <header>
+        <img class="logoAlura" src="assets/logo.png" alt="logo da alura">
+    </header>
+    <main>
+        <section class="painel__esquerdo">
+            <textarea class="text-area" cols="41" rows="4" placeholder="Digite seu texto"></textarea>
+
+            <div class="informacao">
+                <img src="assets/bi_exclamation-circle-fill(1).png" alt="exclamacao">
+                <span>Apenas letras minúsculas e sem acento.</span>
+            </div>
+
+            <div class="botoes">
+                <button class="button" onclick="btnEncriptar(); mostraOculta(); ocultaCopiar()">Criptografar</button>
+                <button class="button button--descriptografar" onclick="btnDesencriptar()">Descriptografar</button>
+            </div>
+        </section>
+        <section class="painel__direito">
+            <textarea class="mensagem" cols="20" rows="10" autocomplete="off"></textarea>
+
+            <div class="texto__oculto" id="myDIV">
+                <img class="boneco" src="assets/High quality products 1 1.svg" alt="boneco">
+                <p class="frase">Nenhuma mensagem <br> encontrada</p> <br>
+                <p class="frase frase--pequena">Digite um texto que você deseja <br>criptografar ou descriptografar.</p>
+                <br>
+
+            </div>
+            <button class="button button--copiar" id="copiar" onclick="copiarTexto()">Copiar</button>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
